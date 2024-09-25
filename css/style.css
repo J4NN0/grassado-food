@@ -25,13 +25,22 @@ body {
 }
 
 .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 15px;
   padding: 20px;
   width: 250px;
   text-align: center;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  /* Slightly increases the size of the card */
+  transform: scale(1.05);
+  /* Increases the shadow to create a lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -57,6 +66,15 @@ body {
   text-align: center;
   border-radius: 10px;
   margin-bottom: 30px;
+}
+
+.navbar a.active {
+  /* Different color for the active page */
+  color: #ff8c00;
+  /* Bold font to highlight the active link */
+  font-weight: bold;
+  /* Optional: underline the active link */
+  /* border-bottom: 2px solid #ff8c00; */
 }
 
 .navbar ul {
