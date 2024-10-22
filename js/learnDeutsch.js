@@ -132,24 +132,32 @@ function startLearnDeutsch() {
     document.getElementById('flappyCanvas').style.display = 'none'; // Hide Flappy Bird canvas
     document.getElementById('learnDeutschGame').style.display = 'block'; // Show Learn Deutsch section
     score = 0;
-    document.getElementById('score').innerText = `Score: ${score}`;
-    document.getElementById('message').innerText = '';
-    getNextWord();
+    document.getElementById('learnDeutschGameScore').innerText = `Score: ${score}`;
+    document.getElementById('learnDeutschGameMessage').innerText = '';
+    getNextRandomWord();
 }
 
-function getNextWord() {
-    // Select a random word from the list
+function getNextRandomWord() {
     currentWord = words[Math.floor(Math.random() * words.length)];
     document.getElementById('germanWord').innerText = currentWord.german;
     document.getElementById('userInput').value = '';
 }
 
+// Event listener to handle Enter key in the input field
+document.getElementById('userInput').addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+        submitAnswer();
+    }
+});
+
 function submitAnswer() {
     const userAnswer = document.getElementById('userInput').value.toLowerCase();
-    const messageField = document.getElementById('message');
+    const messageField = document.getElementById('learnDeutschGameMessage');
+    const scoreField = document.getElementById('learnDeutschGameScore');
+    const gameContainer = document.getElementById('learnDeutschGame');
 
     if (userAnswer.toLowerCase() === 'exit') {
-        document.getElementById('learnDeutschGame').style.display = 'none';
+        gameContainer.style.display = 'none';
         alert(`Game over! Your final score: ${score}`);
         return;
     }
@@ -161,6 +169,6 @@ function submitAnswer() {
         messageField.innerText = `Wrong! The correct answer is "${currentWord.english}".`;
     }
 
-    document.getElementById('score').innerText = `Score: ${score}`;
-    getNextWord(); // Get the next word
+    scoreField.innerText = `Score: ${score}`;
+    getNextRandomWord();
 }
