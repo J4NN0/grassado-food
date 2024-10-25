@@ -162,7 +162,7 @@ function submitAnswer() {
         return;
     }
 
-    if (userAnswer.toLowerCase() === currentWord.english.toLowerCase()) {
+    if (userAnswer.trim().toLowerCase() === currentWord.english.toLowerCase()) {
         score++;
         messageField.innerText = 'Correct! 🎉';
     } else {
