@@ -129,12 +129,20 @@ let currentWord = null;
 let score = 0;
 
 function startLearnDeutsch() {
-    document.getElementById('flappyCanvas').style.display = 'none'; // Hide Flappy Bird canvas
+    hideAllGames();
+
     document.getElementById('learnDeutschGame').style.display = 'block'; // Show Learn Deutsch section
     score = 0;
     document.getElementById('learnDeutschGameScore').innerText = `Score: ${score}`;
     document.getElementById('learnDeutschGameMessage').innerText = '';
+
     getNextRandomWord();
+}
+
+function hideAllGames() {
+    document.getElementById('flappyCanvas').style.display = 'none';
+    document.getElementById('learnDeutschGame').style.display = 'none';
+    document.getElementById('playWithGGGame').style.display = 'none';
 }
 
 function getNextRandomWord() {

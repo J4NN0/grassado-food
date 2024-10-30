@@ -1,5 +1,6 @@
 function startFlappyBird() {
-    document.getElementById('learnDeutschGame').style.display = 'none'; // Hide Learn Deutsch section
+    hideAllGames();
+    
     const canvas = document.getElementById('flappyCanvas');
     const context = canvas.getContext('2d');
 
@@ -23,4 +24,10 @@ function startFlappyBird() {
 
     canvas.style.display = 'block'; // Show Flappy Bird canvas
     updateGame();
+}
+
+function hideAllGames() {
+    document.getElementById('flappyCanvas').style.display = 'none';
+    document.getElementById('learnDeutschGame').style.display = 'none';
+    document.getElementById('playWithGGGame').style.display = 'none';
 }
