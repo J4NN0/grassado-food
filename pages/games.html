@@ -62,15 +62,22 @@
             <h2>Play with GG</h2>
             <p>Are you gay?</p>
             <div class="button-container">
-                <button id="yesButton" onclick="showPopup()">Yes</button>
-                <button id="noButton" onmouseover="moveNoButton()">No</button>
+                <button id="yesButton" onclick="showYesPopup()">Yes</button>
+                <button id="noButton" onmouseover="moveNoButton()" onclick="showNoPopup()">No</button>
             </div>
         </div>
 
-        <div id="customPopup" class="popup" style="display:none;">
+        <div id="yesPopup" class="popup" style="display:none;">
             <div class="popup-content">
-                <p>I knew it!</p>
-                <button onclick="closePopup()">Close</button>
+                <p>Why are you gay?</p>
+                <button onclick="closeYesPopup()">Close</button>
+            </div>
+        </div>
+
+        <div id="noPopup" class="popup" style="display:none;">
+            <div class="popup-content">
+                <p>You are gay</p>
+                <button onclick="closeNoPopup()">Close</button>
             </div>
         </div>
     </div>

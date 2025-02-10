@@ -27,10 +27,18 @@ function moveNoButton() {
     noButton.style.top = `${randomY}px`;
 }
 
-function showPopup() {
-    document.getElementById('customPopup').style.display = 'flex';
+function showYesPopup() {
+    document.getElementById('yesPopup').style.display = 'flex';
 }
 
-function closePopup() {
-    document.getElementById('customPopup').style.display = 'none';
+function closeYesPopup() {
+    document.getElementById('yesPopup').style.display = 'none';
+}
+
+function showNoPopup() {
+    document.getElementById('noPopup').style.display = 'flex';
+}
+
+function closeNoPopup() {
+    document.getElementById('noPopup').style.display = 'none';
 }
