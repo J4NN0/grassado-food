@@ -40,7 +40,6 @@
         <div class="game-selection">
             <button onclick="startFlappyBird()">🐤 Flappy Bird</button>
             <button onclick="startLearnDeutsch()">🇩🇪 Learn Deutsch</button>
-            <button onclick="startPlayWithGG()">🥥 Play with GG</button>
         </div>
 
         <!-- Canvas for Flappy Bird Game -->
@@ -56,35 +55,10 @@
             <p id="learnDeutschGameScore">Score: 0</p>
             <p id="learnDeutschGameMessage">Hello</p>
         </div>
-
-        <!-- Play with GG Game -->
-        <div id="playWithGGGame" style="display:none;">
-            <h2>Play with GG</h2>
-            <p>Are you gay?</p>
-            <div class="button-container">
-                <button id="yesButton" onclick="showYesPopup()">Yes</button>
-                <button id="noButton" onmouseover="moveNoButton()" onclick="showNoPopup()">No</button>
-            </div>
-        </div>
-
-        <div id="yesPopup" class="popup" style="display:none;">
-            <div class="popup-content">
-                <p>Why are you gay?</p>
-                <button onclick="closeYesPopup()">Close</button>
-            </div>
-        </div>
-
-        <div id="noPopup" class="popup" style="display:none;">
-            <div class="popup-content">
-                <p>You are gay</p>
-                <button onclick="closeNoPopup()">Close</button>
-            </div>
-        </div>
     </div>
 
     <script src="../js/flappyBird.js"></script>
     <script src="../js/learnDeutsch.js"></script>
-    <script src="../js/gg.js"></script>
 
 </body>
 

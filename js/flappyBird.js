@@ -29,5 +29,4 @@ function startFlappyBird() {
 function hideAllGames() {
     document.getElementById('flappyCanvas').style.display = 'none';
     document.getElementById('learnDeutschGame').style.display = 'none';
-    document.getElementById('playWithGGGame').style.display = 'none';
 }
