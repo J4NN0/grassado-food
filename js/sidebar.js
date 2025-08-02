@@ -1,7 +1,6 @@
 // Filtering functionality
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.card');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {
@@ -11,17 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
             this.classList.add('active');
 
             const category = this.getAttribute('data-category');
-
-            cards.forEach(card => {
-                const cardCategories = card.getAttribute('data-category').split(' ');
-
-                if (category === 'all' || cardCategories.includes(category)) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeIn 0.5s ease-in';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            
+            // Render dishes based on selected category
+            renderDishes(category);
         });
     });
 });
@@ -29,9 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Add CSS animation for smooth transitions
 const style = document.createElement('style');
 style.textContent = `
-            @keyframes fadeIn {
-                from { opacity: 0; transform: translateY(20px); }
-                to { opacity: 1; transform: translateY(0); }
-            }
-        `;
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .card {
+        animation: fadeIn 0.5s ease-in;
+    }
+`;
 document.head.appendChild(style);
