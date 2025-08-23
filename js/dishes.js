@@ -4,7 +4,7 @@ const dishes = [
         category: "juices",
         image: "img/juices/detox.png",
         name: "Monday Detox",
-        description: "One <b>cucumber</b>, two <b>green apples</b>, two <b>celery</b> ribs, a handful of <b>spinach</b>, and a bit of <b>ginger</b>."
+        description: "One <b>cucumber</b>, one <b>green apple</b>, two <b>celery</b> stalks, a handful of <b>spinach</b>, half a <b>lemon</b>, and a small piece of <b>ginger</b>."
     },
     {
         category: "juices",
