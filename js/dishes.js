@@ -109,6 +109,12 @@ const dishes = [
         description: "<b>Ossobuco</b> is first fried until golden on each side, then slowly cooked with <b>onions</b>, <b>carrots</b>, <b>celery</b> and <b>beef stock</b> until tender. Served with <b>smashed potatoes</b>."
     },
     {
+        category: "second",
+        image: "img/second-dishes/tapioca-carne-seca.png",
+        name: "Tapioca with Carne Seca",
+        description: "<b>Tapioca crepe</b> filled with shredded <b>carne seca</b> (dried beef), <b>cheese</b>, and <b>cream cheese</b>."
+    },
+    {
         category: "dessert",
         image: "img/desserts/banana-bread.png",
         name: "Banana Bread",
