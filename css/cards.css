@@ -8,12 +8,18 @@
   text-align: center;
   color: #2c3e50;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
 .card:hover {
   transform: translateY(-8px);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
 }
 
 .card img {
@@ -26,6 +32,62 @@
 
 .card:hover img {
   transform: scale(1.05);
+}
+
+.vegetarian-icon {
+  position: absolute;
+  top: 180px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.vegetarian-tooltip {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(76, 175, 80, 0.95);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.vegetarian-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(76, 175, 80, 0.95);
+}
+
+.vegetarian-icon:hover .vegetarian-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
 }
 
 .card-content {

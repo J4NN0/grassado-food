@@ -1,10 +1,8 @@
-// Helper function to clear active states from all filter elements
 function clearAllActiveStates(filterButtons, vegetarianIcon) {
     filterButtons.forEach(btn => btn.classList.remove('active'));
     if (vegetarianIcon) vegetarianIcon.classList.remove('active');
 }
 
-// Helper function to handle category filtering
 function handleCategoryFilter(element, filterButtons, vegetarianIcon) {
     clearAllActiveStates(filterButtons, vegetarianIcon);
     element.classList.add('active');
@@ -13,7 +11,6 @@ function handleCategoryFilter(element, filterButtons, vegetarianIcon) {
     renderDishes(category);
 }
 
-// Function to add CSS animations
 function addCSSAnimations() {
     const style = document.createElement('style');
     style.textContent = `
@@ -29,7 +26,6 @@ function addCSSAnimations() {
     document.head.appendChild(style);
 }
 
-// Filtering functionality
 document.addEventListener('DOMContentLoaded', function () {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const vegetarianIcon = document.querySelector('.vegetarian-icon');
@@ -45,5 +41,4 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Add CSS animation for smooth transitions
 addCSSAnimations();

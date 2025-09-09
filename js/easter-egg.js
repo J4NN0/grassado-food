@@ -1,4 +1,3 @@
-// Food Raining Easter Egg
 let clickCount = 0;
 let clickTimer = null;
 let inactivityTimer = null;

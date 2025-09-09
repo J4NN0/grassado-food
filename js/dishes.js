@@ -1,4 +1,3 @@
-// Dishes Data
 const dishes = [
     {
         categories: ["juices"],
@@ -123,9 +122,20 @@ const dishes = [
 ];
 
 function createCard(dish) {
+    const isVegeterian = dish.categories.includes('vegetarian');
+    const vegeterianIcon = isVegeterian ? `
+        <div class="vegetarian-icon">
+            🌱
+            <div class="vegetarian-tooltip">Vegetarian</div>
+        </div>
+    ` : '';
+    
     return `
         <div class="card" data-categories="${dish.categories.join(',')}">
-            <img src="${dish.image}" alt="${dish.name}">
+            <div class="card-image-container">
+                <img src="${dish.image}" alt="${dish.name}">
+            </div>
+            ${vegeterianIcon}
             <div class="card-content">
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
