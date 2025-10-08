@@ -96,6 +96,15 @@ body::before {
   justify-content: center;
 }
 
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #8e9aaf;
+  font-size: 1.1em;
+  font-style: italic;
+}
+
 /* Mobile optimization */
 @media (max-width: 768px) {
   body {

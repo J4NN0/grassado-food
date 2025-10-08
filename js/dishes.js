@@ -143,16 +143,3 @@ function createCard(dish) {
         </div>
     `;
 }
-
-function renderDishes(category = 'all') {
-    const container = document.getElementById('brunch-container');
-    const filteredDishes = category === 'all'
-        ? dishes
-        : dishes.filter(dish => dish.categories.includes(category));
-    
-    container.innerHTML = filteredDishes.map(dish => createCard(dish)).join('');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    renderDishes('all');
-});

@@ -33,12 +33,18 @@
 
     <div class="sidebar-layout">
         <div class="sidebar">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search dishes..." class="search-input">
+                <div class="search-icon">🔍</div>
+            </div>
+
             <div class="categories-header">
                 <h3>Categories</h3>
                 <button class="vegetarian-icon" data-category="vegetarian" title="Vegetarian Options">
                     🌱
                 </button>
             </div>
+            
             <ul>
                 <li><button class="filter-btn active" data-category="all">All Dishes</button></li>
                 <li><button class="filter-btn" data-category="juices">Juices</button></li>
