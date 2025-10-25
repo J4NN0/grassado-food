@@ -114,6 +114,12 @@ const dishes = [
         description: "<b>Tapioca crepe</b> filled with shredded <b>carne seca</b> (dried beef), <b>cheese</b>, and <b>cream cheese</b>."
     },
     {
+        categories: ["second"],
+        image: "img/second-dishes/salmon-broccoli.png",
+        name: "Salmon with Broccoli",
+        description: "Grilled <b>Salmon</b> fillet, served with a side of sautéed <b>broccoli</b>."
+    },
+    {
         categories: ["dessert", "vegetarian"],
         image: "img/desserts/banana-bread.png",
         name: "Banana Bread",
