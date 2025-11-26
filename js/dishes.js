@@ -102,6 +102,12 @@ const dishes = [
         description: "Tender <b>beef strips</b> cooked in a rich sauce made with <b>tomato paste</b>, <b>mustard</b>, <b>soy sauce</b>, and <b>cream</b>, with sautéed <b>mushrooms</b> added at the end, served alongside white <b>rice</b>."
     },
     {
+        categories: ["main"],
+        image: "img/main-dishes/couscous.png",
+        name: "Couscous",
+        description: "Steamed <b>couscous</b>, served with a flavorful stew of <b>cherry tomatoes</b>, and fried <b>pork sausage</b>."
+    },
+    {
         categories: ["second"],
         image: "img/second-dishes/ossobuco.png",
         name: "Ossobuco with Smashed Potatoes",
@@ -118,6 +124,12 @@ const dishes = [
         image: "img/second-dishes/salmon-broccoli.png",
         name: "Salmon with Broccoli",
         description: "Grilled <b>Salmon</b> fillet, served with a side of sautéed <b>broccoli</b>."
+    },
+    {
+        categories: ["second"],
+        image: "img/second-dishes/meatballs.png",
+        name: "Meatballs",
+        description: "Beef <b>meatballs</b> simmered in a rich <b>tomato sauce</b>, served with a side of <b>smashed potatoes</b>."
     },
     {
         categories: ["dessert", "vegetarian"],
