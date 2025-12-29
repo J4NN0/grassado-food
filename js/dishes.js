@@ -52,7 +52,7 @@ const dishes = [
         image: "img/main-dishes/cannelloni.png",
         name: "Cannelloni",
         description: "Cannelloni baked in the oven filled with <b>ricotta</b> and <b>spinach</b>, topped with a layer of <b>tomato sauce</b> and <b>besciamella</b>.",
-        guestFavorite: true
+        chefFavorite: true
     },
     {
         categories: ["main"],
@@ -107,7 +107,7 @@ const dishes = [
         image: "img/main-dishes/couscous.png",
         name: "Couscous",
         description: "Steamed <b>couscous</b>, served with a flavorful stew of <b>cherry tomatoes</b>, and fried <b>pork sausage</b>.",
-        guestFavorite: true
+        chefFavorite: true
     },
     {
         categories: ["second"],
@@ -138,7 +138,7 @@ const dishes = [
         image: "img/desserts/banana-bread.png",
         name: "Banana Bread",
         description: "Cake made with <b>bananas</b>, <b>eggs</b>, <b>flour</b>, <b>cinnamon</b>, <b>milk</b>, <b>nuts</b>, <b>vanilla</b>, and <b>butter</b>.",
-        guestFavorite: true
+        chefFavorite: true
     }
 ];
 
@@ -151,15 +151,15 @@ function createCard(dish) {
         </div>
     ` : '';
 
-    const guestFavoriteLabel = dish.guestFavorite ? `
-        <div class="guest-favorite-label">★ Guest Favorite</div>
+    const chefFavoriteLabel = dish.chefFavorite ? `
+        <div class="chef-favorite-label">★ Chef Favorite</div>
     ` : '';
 
     return `
         <div class="card" data-categories="${dish.categories.join(',')}">
             <div class="card-image-container">
                 <img src="${dish.image}" alt="${dish.name}">
-                ${guestFavoriteLabel}
+                ${chefFavoriteLabel}
             </div>
             ${vegeterianIcon}
             <div class="card-content">
