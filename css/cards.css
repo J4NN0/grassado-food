@@ -114,3 +114,21 @@
   color: #e67e22;
   font-weight: 500;
 } 
+
+.guest-favorite-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ffd700;
+  color: #b36b00;
+  font-weight: bold;
+  font-size: 0.95em;
+  padding: 6px 14px 6px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+  letter-spacing: 0.5px;
+}
