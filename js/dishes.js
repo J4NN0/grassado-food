@@ -1,12 +1,12 @@
 const dishes = [
     {
-        categories: ["juices"],
+        categories: ["juices", "vegetarian"],
         image: "img/juices/detox.png",
         name: "Monday Detox",
         description: "One <b>cucumber</b>, one <b>green apple</b>, two <b>celery</b> stalks, a handful of <b>spinach</b>, half a <b>lemon</b>, and a small piece of <b>ginger</b>."
     },
     {
-        categories: ["juices"],
+        categories: ["juices", "vegetarian"],
         image: "img/juices/ace.png",
         name: "Vitamin Boost",
         description: "ACE juice made with two <b>oranges</b>, two <b>carrots</b>, and one <b>lemon</b>."
