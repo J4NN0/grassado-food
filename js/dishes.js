@@ -134,6 +134,12 @@ const dishes = [
         description: "Beef <b>meatballs</b> simmered in a rich <b>tomato sauce</b>, served with a side of <b>smashed potatoes</b>."
     },
     {
+        categories: ["second"],
+        image: "img/second-dishes/goulash.png",
+        name: "Goulash",
+        description: "Tender <b>beef goulash</b> slow cooked in the pressure pot with <b>onions</b>, <b>paprika</b>, <b>tomatoes</b>, <b>carrots</b>, <b>celery</b>, and optionally <b>potatoes</b>."
+    },
+    {
         categories: ["dessert", "vegetarian"],
         image: "img/desserts/banana-bread.png",
         name: "Banana Bread",
@@ -143,8 +149,8 @@ const dishes = [
 ];
 
 function createCard(dish) {
-    const isVegeterian = dish.categories.includes('vegetarian');
-    const vegeterianIcon = isVegeterian ? `
+    const isVegetarian = dish.categories.includes('vegetarian');
+    const vegetarianIcon = isVegetarian ? `
         <div class="vegetarian-icon">
             🌱
             <div class="vegetarian-tooltip">Vegetarian</div>
@@ -161,7 +167,7 @@ function createCard(dish) {
                 <img src="${dish.image}" alt="${dish.name}">
                 ${chefFavoriteLabel}
             </div>
-            ${vegeterianIcon}
+            ${vegetarianIcon}
             <div class="card-content">
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
