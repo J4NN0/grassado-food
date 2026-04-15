@@ -119,7 +119,8 @@ const dishes = [
         categories: ["second"],
         image: "img/second-dishes/tapioca-carne-seca.png",
         name: "Tapioca with Carne Seca",
-        description: "<b>Tapioca crepe</b> filled with shredded <b>carne seca</b> (dried beef), <b>cheese</b>, and <b>cream cheese</b>."
+        description: "<b>Tapioca crepe</b> filled with shredded <b>carne seca</b> (dried beef), <b>cheese</b>, and <b>cream cheese</b>.",
+        chefFavorite: true
     },
     {
         categories: ["second"],
