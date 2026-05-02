@@ -32,8 +32,7 @@ function renderDishes(category = 'all', searchTerm = '') {
 }
 
 function updateResults() {
-    const searchInput = document.getElementById('search-input');
-    renderDishes(currentCategory, searchInput.value);
+    renderDishes(currentCategory, currentSearchTerm);
 }
 
 function clearAllActiveStates(filterButtons, vegetarianIcon) {
@@ -41,11 +40,30 @@ function clearAllActiveStates(filterButtons, vegetarianIcon) {
     if (vegetarianIcon) vegetarianIcon.classList.remove('active');
 }
 
-function handleCategoryFilter(element, filterButtons, vegetarianIcon) {
+function setActiveCategory(category, filterButtons, vegetarianIcon) {
     clearAllActiveStates(filterButtons, vegetarianIcon);
-    element.classList.add('active');
-    
-    currentCategory = element.getAttribute('data-category');
+
+    if (category === 'vegetarian' && vegetarianIcon) {
+        vegetarianIcon.classList.add('active');
+        return;
+    }
+
+    const activeButton = Array.from(filterButtons).find(
+        button => button.getAttribute('data-category') === category
+    );
+
+    if (activeButton) {
+        activeButton.classList.add('active');
+    }
+}
+
+function handleCategoryFilter(element, filterButtons, vegetarianIcon) {
+    const selectedCategory = element.getAttribute('data-category');
+    currentCategory = currentCategory === selectedCategory && selectedCategory !== 'all'
+        ? 'all'
+        : selectedCategory;
+
+    setActiveCategory(currentCategory, filterButtons, vegetarianIcon);
     updateResults();
 }
 
@@ -66,17 +84,19 @@ function addCSSAnimations() {
 
 function initializeFiltering() {
     addCSSAnimations();
-    renderDishes('all');
-    
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const vegetarianIcon = document.querySelector('.vegetarian-icon[data-category]');
     const searchInput = document.getElementById('search-input');
+
+    setActiveCategory(currentCategory, filterButtons, vegetarianIcon);
+    renderDishes(currentCategory, currentSearchTerm);
+
     if (searchInput) {
         searchInput.addEventListener('input', function() {
+            currentSearchTerm = this.value;
             updateResults();
         });
     }
-    
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const vegetarianIcon = document.querySelector('.vegetarian-icon[data-category]');
 
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
