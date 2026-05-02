@@ -80,6 +80,12 @@ const dishes = [
     },
     {
         categories: ["main"],
+        image: "img/main-dishes/pasta-frutti-mare.png",
+        name: "Pasta Frutti di Mare",
+        description: "Seafood pasta with a mix of <b>shrimp</b>, <b>mussels</b>, and <b>clams</b> in a light <b>tomato sauce</b>, garnished with fresh <b>parsley</b>."
+    },
+    {
+        categories: ["main"],
         image: "img/main-dishes/rice-bacon-peas.png",
         name: "Risotto with Bacon and Peas",
         description: "Rice toasted with butter, then deglazed with white wine. The rice is then slowly cooked using <b>vegetable stock</b>, then complemented by crispy <b>bacon</b> and <b>green peas</b>."
@@ -138,6 +144,12 @@ const dishes = [
         image: "img/second-dishes/goulash.png",
         name: "Goulash",
         description: "Tender <b>beef goulash</b> slow cooked in the pressure pot with <b>onions</b>, <b>paprika</b>, <b>tomatoes</b>, <b>carrots</b>, <b>celery</b>, and optionally <b>potatoes</b>."
+    },
+    {
+        categories: ["salads", "vegetarian"],
+        image: "img/salads/julia.png",
+        name: "Julia's Salad",
+        description: "A fresh salad with a mix of <b>lettuce</b>, <b>cherry tomatoes</b>, <b>cucumbers</b>, <b>carrots</b>, <b>avocado</b>, <b>feta cheese</b>, and a light <b>mustard</b> dressing."
     },
     {
         categories: ["dessert", "vegetarian"],
