@@ -37,8 +37,8 @@ const dishes = [
     },
     {
         categories: ["brunch"],
-        image: "img/brunches/white-lagertha.png",
-        name: "White Lagertha",
+        image: "img/brunches/lagertha.png",
+        name: "Lagertha",
         description: "A fresh and light brunch featuring <b>toasted bread</b> topped with <b>scrambled eggs</b>, fresh <b>rucola</b>, sliced <b>cherry tomatoes</b>, <b>ham</b>, and creamy <b>burrata cheese</b> to finish."
     },
     {
@@ -46,6 +46,13 @@ const dishes = [
         image: "img/starters/pao-de-queijo.png",
         name: "Pão de Queijo",
         description: "A Brazilian cheese bread made with <b>tapioca flour</b>, <b>cheese</b>, and <b>egg</b>."
+    },
+    {
+        categories: ["starters", "main"],
+        image: "img/main-dishes/dumplings.png",
+        name: "Dumplings",
+        description: "Steamed dumplings filled with <b>minced pork meat</b>, seasoned with <b>soy sauce</b>, <b>ginger</b>, and <b>garlic</b>, served with a spicy <b>dipping sauce</b>.",
+        chefFavorite: false
     },
     {
         categories: ["main", "vegetarian"],
