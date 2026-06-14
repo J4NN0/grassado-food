@@ -48,6 +48,13 @@ const dishes = [
         description: "A Brazilian cheese bread made with <b>tapioca flour</b>, <b>cheese</b>, and <b>egg</b>."
     },
     {
+        categories: ["starters", "main", "vegetarian"],
+        image: "img/starters/spinach-cheaps.png",
+        name: "Spinach Cheaps",
+        description: "Fresh <b>spinach leave</b> air-fried with <b>olive oil</b>, <b>salt</b>, and <b>black pepper</b> until crispy.",
+        chefFavorite: false
+    },
+    {
         categories: ["starters", "main"],
         image: "img/main-dishes/dumplings.png",
         name: "Dumplings",
