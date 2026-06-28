@@ -90,9 +90,13 @@
   transform: translateX(-50%) translateY(-5px);
 }
 
+.vegetarian-icon + .seasonal-icon {
+  top: 216px;
+}
+
 .seasonal-icon {
   position: absolute;
-  top: 216px;
+  top: 180px;
   right: 8px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
