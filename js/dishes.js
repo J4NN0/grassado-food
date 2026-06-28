@@ -99,6 +99,12 @@ const dishes = [
         description: "Seafood pasta with a mix of <b>shrimp</b>, <b>mussels</b>, and <b>clams</b> in a light <b>tomato sauce</b>, garnished with fresh <b>parsley</b>."
     },
     {
+        categories: ["main", "seasonal"],
+        image: "img/main-dishes/summer-pasta.png",
+        name: "Summer Pasta",
+        description: "<b>Tuna</b> and <b>capers</b> are mixed with fresh <b>cherry tomatoes</b> and tossed with pasta. Served cold for a light and refreshing summer dish."
+    },
+    {
         categories: ["main"],
         image: "img/main-dishes/rice-bacon-peas.png",
         name: "Risotto with Bacon and Peas",
@@ -184,6 +190,14 @@ function createCard(dish) {
         </div>
     ` : '';
 
+    const isSeasonal = dish.categories.includes('seasonal');
+    const seasonalIcon = isSeasonal ? `
+        <div class="seasonal-icon">
+            🌤️
+            <div class="seasonal-tooltip">Seasonal</div>
+        </div>
+    ` : '';
+
     const chefFavoriteLabel = dish.chefFavorite ? `
         <div class="chef-favorite-label">★ Chef Favorite</div>
     ` : '';
@@ -195,6 +209,7 @@ function createCard(dish) {
                 ${chefFavoriteLabel}
             </div>
             ${vegetarianIcon}
+            ${seasonalIcon}
             <div class="card-content">
                 <h2>${dish.name}</h2>
                 <p>${dish.description}</p>
