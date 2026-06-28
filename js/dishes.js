@@ -93,6 +93,12 @@ const dishes = [
         description: "The <b>broccoli</b> are first boiled until soft, then sautéed in a pan with <b>garlic</b>. The <b>pasta</b> is cooked in the same water used for the broccoli, then combined and fried together with the broccoli and garlic at the end for extra flavor."
     },
     {
+        categories: ["main", "vegetarian"],
+        image: "img/main-dishes/pasta-pesto-trapanese.png",
+        name: "Pasta with Sicilian Pesto (Trapanese)",
+        description: "<b>Peeled tomatoes</b>, <b>almonds</b>, and <b>garlic</b> are smashed together and mixed raw with <b>olive oil</b> and a touch of <b>basil</b>. The pesto is then tossed with <b>Busiate</b> pasta straight after cooking."
+    },
+    {
         categories: ["main"],
         image: "img/main-dishes/pasta-frutti-mare.png",
         name: "Pasta Frutti di Mare",
